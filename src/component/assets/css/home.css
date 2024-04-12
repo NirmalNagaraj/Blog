@@ -1,0 +1,183 @@
+/* home.css */
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2); 
+  z-index: 0;
+}
+
+.company-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 100%;
+
+}
+
+.company-info h1 {
+  margin: 0;
+  font-size: 4.5em;
+ 
+}
+.btn-home {
+ 
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius:50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 1;
+ }
+ 
+ .btn-home::before, .btn-home::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background:linear-gradient(to left, #df6f1b,  #df1b5a) ;
+ 
+  transition: 1s ease;
+ }
+ 
+ .btn-home::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .btn-home::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .btn-home:hover::before, .btn-home:hover::after ,.btn-home:focus::before, .btn-home:focus::after{
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .btn-home:hover {
+  color:#fff;
+ }
+ 
+ .touch-device .btn-home:active {
+  filter: brightness(.8);
+ }
+ 
+
+.company-info p {
+  margin-top: 10px;
+  font-size: 3em;
+  
+}
+
+
+  
+
+.whatsapp-logo a img{
+  float: right;
+  width:50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function:ease-in-out;
+  transition-delay: 0s;
+}
+
+.whatsapp-logo a img:hover{
+  transform: translate(-10px);
+}
+@media (max-width: 768px){
+  .whatsapp-logo a img{
+    float: right;
+    width: 50px;
+    height: 50px;
+  
+  }
+}
+
+
+
+@media (max-width: 768px){
+  .home {
+    width: 100%;
+    height: 50vh;
+  }
+  .background-video {
+    width: 100%;
+    height:100vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+ 
+ .company-info{
+  z-index:-1;
+margin-top: 10rem;
+  
+
+ }
+  .company-info h1 {
+    margin: 0;
+    font-size:3.2em;
+
+
+  }
+
+  .company-info p {
+    margin-top: 10px;
+    font-size: 1.8em;
+  }
+  .hidden{
+    display:none;
+  }
+  .btn-home{
+   
+    background: linear-gradient(to left, #df1b5a, #df6f1b) ;
+    color: #fff;
+  }
+}

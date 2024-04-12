@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper{
+
+    height:100vh;
+    overflow-y: auto;
+    align-items: center;
+    justify-content: center;
+        
+}
+
+.service-container {    
+    padding:150px 200px;
+    width:100% ;
+    height: 100vh;
+    background:linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0) 100%), url('../image/ser3.jpg');
+    background-size: cover;
+}
+
+
+.Main{
+    
+    color:#c40000;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:500;   
+    font-size: 32px;
+    
+}
+
+
+.service-container h2{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 300;
+    font-size: 60px;
+    color: #ffffff;
+    
+}
+
+.serv-btn{
+    width:150px;
+    height:50px;
+    color:#fefefe;
+    border-radius: 15px;
+    background:linear-gradient(to left, #df1b5a, #df6f1b) ;
+    margin-top:10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
+button a{
+    color:#fefefe;
+    font-style: italic;
+    text-decoration: none;
+    font-size:18px;
+}
+
+
+.serv-btn:hover{
+    transform: translateY(10px);
+
+}
+
+/* Pentest Service */
+
+
+
+.ps{
+
+    padding: 100px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    width:100% ;
+    background:linear-gradient(to right, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('../image/servbg.jpeg');
+    background-size: cover;
+       
+}
+
+.ps h1{
+    color:#ff0000;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.ps h2{
+    color:#ff0000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.3rem;
+  
+}
+
+.ps span{
+    color:cyan;
+}
+
+.ps p{
+    color:#ffffff;
+    font-size: 23px;
+    font-weight:500;
+}
+
+.p-service-box{
+
+    padding:10px;
+}
+
+.p-inner-box{
+
+    border-radius: 15px;
+    width:100%;
+    padding:40px;
+    margin:30px 0;
+    background: rgba(0, 0, 0, 0.068);
+    box-shadow: 0px 5px 15px rgb(198, 197, 197);
+}
+
+@media only screen and (max-width: 768px) {
+   
+    .ps {
+        padding:80px 30px;
+    }
+    
+    .ps h1 {
+        font-size: 1.4rem;
+    }
+    
+    .ps h2 {
+        font-size: 1.4rem;
+    }
+
+    .ps span{
+        font-size: 20px;
+    }
+    
+    .ps p {
+        font-size: 18px;
+    }
+    
+
+    .p-inner-box {
+        padding: 20px;
+    }
+}
+
+
+
+.whatsapp-logo{
+    width: 100%;
+}
+  
+    
+  
+  .whatsapp-logo a img{
+    float: right;
+    width:50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+
+  /* @media (max-width: 768px){
+    .whatsapp-logo a img{
+      float: right;
+      width: 30px;
+      height: 30px;
+    }
+  }
+   */
+
+
+@media screen and (max-width: 760px) {
+    .service-container {
+        padding: 12%;
+        padding-top:50%;
+        background:linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%), url('../image/ser3.jpg');
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center;
+    }
+
+    .Main {
+        font-size: 10vw;
+        color:#ff0000;
+    }
+
+    .service-container h2 {
+        font-size: 8vw;
+        color:#ffffff ;
+    }
+
+    .serv-btn {
+        width:45%;
+        
+    }
+
+    .serv-btn a{
+        font-size: 4vw;
+    }
+    
+}
+

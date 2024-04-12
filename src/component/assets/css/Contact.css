@@ -1,0 +1,181 @@
+.contact-container {
+
+  background: url('../image/contact.jpg');
+  padding: 0px 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+
+}
+
+.contact-box {
+
+  border-radius: 16px;
+  width: 50%;
+  padding:30px;
+  margin-top:50px ;  
+  background: rgb(241, 238, 238);
+  box-shadow: 0px 5px 15px rgb(196, 196, 196);
+  line-height: 2rem;
+  height: auto;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+.contact-box h1 {
+  font-family:serif;
+  color:#000000;
+  font-weight: 400;
+  font-size: 30px;
+  margin-left: 10px;
+}
+
+form {
+  
+  width: auto;
+  height: auto;
+  padding: 10px;
+}
+
+form input {
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  border:#fff;
+  border-bottom: 1px solid #414040;
+  background-color: #ffffff;
+  color: black;
+  padding:5px;
+  
+}
+
+form select {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black;
+}
+
+form textarea {
+  margin-top: 15px;
+  height: 70px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 1px solid #121619;
+  background-color: #fff;
+  color: rgb(6, 6, 6);
+  padding:5px 0 0 5px;
+}
+input::placeholder,
+textarea::placeholder {
+  font-weight: 100;
+  color: rgb(172, 172, 172);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+}
+
+form label {
+  margin-top: 15px;
+  color: #000000;
+}
+
+form button {
+  position: relative;
+  bottom :40px;
+  margin-top: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 140px;
+  height: 30px;
+  border: none;
+  background-color: #41494f;
+  color: whitesmoke;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+form button:hover{
+  background:linear-gradient(to left, #df1b5a, #df6f1b);
+}
+
+/* field code*/
+.field{
+width:100%
+
+}
+.subfield_1{
+width: 45%;
+float: left;
+
+}
+.subfield_2{
+  width: 45%;
+float: right;
+}
+
+.whatsapp-logo{
+  width: 100%;}
+
+  
+
+.whatsapp-logo a img{
+  float: right;
+  width:60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+@media (max-width: 768px){
+  .whatsapp-logo a img{
+    float: right;
+    width: 50px;
+    height: 50px;
+  
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+ 
+  .contact-container {
+    padding: 10px 10px;
+   
+    
+  }
+
+  .contact-box {
+    
+    width: 90%;
+    font-size:medium; 
+    position:relative;
+    top:50px;
+   
+    
+  }
+ 
+
+  .subfield_1,.subfield_2{
+    width: 100%;
+  }
+
+}
+
+
+

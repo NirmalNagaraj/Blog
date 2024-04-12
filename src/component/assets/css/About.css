@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.about-container {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; 
+}
+
+.top-screen{
+    height: 70vh;
+    width:100%;
+    background-image:linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%), url('../image/Cybersecurity-about.jpg');
+    background-size:cover;   
+}
+
+.about-box {  
+    border-radius: 20px;
+    border: 0;
+    width:50%; 
+    padding: 250px 0 0 170px ;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    transition-delay: 0s;
+}
+
+.about-box:hover{
+    transform: translateX(-10px);
+}
+
+.about-box .p-top{
+    color:rgb(255, 67, 67);
+}
+
+.about-box2{
+border-radius: 30px;
+width:100%;
+padding:30px 160px 0px 160px  ;
+margin:20px 0px 20px 0;
+border: 0;
+line-height: 2rem;
+}
+
+.about-box-inner{
+    
+    border-radius: 15px;
+    top: 30px;
+    width:100%;
+    padding: 10px;
+    margin:0 0 30px 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 5px 15px rgb(198, 197, 197);
+    line-height: 2rem;
+}
+
+.about-box2 h2{
+    position: relative;
+    line-height: 5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 20px;
+    padding: 0 0 14px 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+ span{
+    color:#c40101;
+    font-size: 30px;
+    font-weight:500;
+}
+
+.about-box h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 15px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #ffffff;
+   
+}
+
+.about-box h4{
+    font-size:1.5rem;
+    font-weight: 500;
+    padding: 0 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 67, 67);
+    font-style: italic;
+}
+
+.about-box2 p{
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+}
+
+.about-box p {
+    position: relative;
+    font-size: 20px;
+    padding: 1.25rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+
+}
+
+.whatsapp-logo{
+    width: 100%;}
+  
+  
+  .whatsapp-logo a img{
+    float: right;
+    width:60px;
+    height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  @media (max-width: 768px){
+    .whatsapp-logo a img{
+      float: right;
+      width: 50px;
+      height: 50px;
+    
+    }
+  }
+  
+
+@media screen and (max-width: 576px) {
+    .about-box {
+        
+        width:100%;
+        padding:160px 40px;
+        
+    }
+
+    .top-screen{
+        
+            height: 50vh;
+            width:100%;
+            background:linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0) 100%), url('../image/Cybersecurity-about.jpg');
+            background-size: cover;  
+            background-repeat: no-repeat; 
+            background-position: center;
+        
+    }
+
+    span{
+        font-size:x-large;
+    }
+
+    .about-box2 {
+        padding:0 5% 0 5%;
+    }
+
+    .about-box2 h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-box h1 {
+       color:#ff0000;
+        padding-top:50px;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .about-box h4 {
+        font-size: 1.0rem;
+        color: #fff;
+        
+    }
+
+    .about-box2 p, .about-box p {
+        font-size: 1.2rem;
+    }
+}

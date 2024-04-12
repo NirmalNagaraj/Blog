@@ -1,0 +1,436 @@
+:root {
+  --primary:  #c6daf8;
+  --red:#c40101;
+  --light: #F1F8FF;
+  --dark: #0F172B;
+}
+
+.academy{
+  height: 100vh;
+  overflow-y:auto;
+  background-image: url('../image/servbg.jpeg');
+  background-size: cover;
+}
+
+/*font size */
+.course_para_content{
+  font-size:20px ;
+}
+
+.heading{
+  font-size: 40px;
+
+}
+i{
+  font-size: 30px;
+}
+.para_heading{
+  font-size:30px;
+}
+.para_content{
+  font-size: 26px;
+}
+
+/* carousel font size*/
+.Benefits .title{
+  font-size: 30px;
+}
+.Benefits .description{
+  font-size:20px ;
+}
+@media (max-width: 768px){
+  .course_para_content{
+    font-size:20px ;
+  }
+  .heading{
+    font-size: 24px;
+  
+  }
+  i{
+    font-size: 18px;
+  }
+  .para_content{
+    font-size: 20px;
+  }
+  .para_heading{
+    font-size:24px;
+  }
+  .Benefits .title{
+    font-size: 18px;
+  }
+  .Benefits .description{
+    font-size:16px ;
+  }
+  
+}
+
+
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  left: -55px;
+  margin-top: -1px;
+ 
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 45px;
+  height: 2px;
+  top: 50%;
+  right: -55px;
+  margin-top: -1px;
+
+  color: #ffff;
+}
+
+.section-title.text-start::before,
+.section-title.text-end::after {
+  display: none;
+}
+
+
+/*** course ***/
+.course-item {
+  height: 350px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+  box-shadow: rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: .5s;
+  text-decoration: none;
+  margin-bottom:2rem ;
+background:#fff;
+}
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+@media (max-width: 768px){
+  .course-item{
+    height:350px;
+  }
+
+}
+
+
+.course-item .course-icon {
+  margin: 0 auto 30px auto;
+  width: 65px;
+  height: 65px;
+  transition: .5s;
+}
+
+.course-item a{
+
+  cursor: pointer;
+
+}
+.course-item h4:hover{
+  text-decoration:underline;
+  
+ 
+}
+
+/* .course-item p{
+  font-size:20px;
+} */
+
+
+.course-item i,
+.course-item h3,
+.course-item p {
+  transition: .5s;
+}
+
+
+
+@media (max-width: 768px){
+  .academy{
+    height: 100vh;
+    overflow-y:auto;
+  }
+ 
+  
+}
+
+/***bootcamp***/
+
+.bootcamp{
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 40px;
+  
+}
+.bootcamp_bg {
+  position: relative;
+  background-image: url('../image/bootcamp_bg2.jpeg');
+  background-size: cover;
+  height: 50vh;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.bootcamp_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Adjust the opacity (last parameter) as needed */
+  border-radius: 10px;
+}
+
+.bootcamp_bg h1, .bootcamp_bg h2 {
+  position: relative;
+  z-index: 4;
+}
+@media (max-width: 768px){
+ .bootcamp_bg{
+  height: 40vh;
+ }
+ .bootcamp{
+  padding: 30px;
+ }
+
+
+}
+img{
+  height:280px;
+}
+
+
+
+.bootcamp .Benefits {
+  height: 400px;
+  width:90%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: .5s;
+  text-decoration: none;
+ margin: 10px;
+ 
+  border-radius: 10px;
+
+}
+
+
+
+
+
+
+/* bug bounty hunter*/
+.bug-bounty-hunter{
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background: #FFFFFF;
+  width: 100%;
+  padding: 40px;
+}
+@media (max-width: 768px){
+  .bug-bounty-hunter{
+    padding: 30px;
+  }
+ 
+ 
+}
+.bug-bounty-hunter .Benefits {
+  height: 380px;
+  width:97%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  transition: .5s;
+  text-decoration: none;
+
+  border-radius: 10px;
+ 
+  text-align:left;
+
+}
+
+
+@media (max-width: 768px){
+  .bug-bounty-hunter .Benefits{
+      width:90%;
+      padding: 20px;
+  }
+ 
+ 
+}
+
+
+
+
+
+.bug-bounty-hunter_bg{
+  position: relative;
+  background-image: url('../image/bootcamp_bg2.jpeg');
+  background-size: cover;
+  height: 50vh;
+  color: #FFFFFF;
+  border-radius: 10px;
+} 
+.bug-bounty-hunter_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.bug-bounty-hunter_bg h1, .bug-bounty-hunter_bg h2 {
+  position: relative;
+  z-index: 4;
+}
+
+
+.pp-topic{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+}
+
+.pentesting-professional{
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 40px;
+}
+@media (max-width: 768px){
+  .pentesting-professional{
+    padding: 30px;
+  }
+  
+}
+.pentesting-professional img{
+  width: 100%;
+}
+
+
+.pentesting-professional ul li{
+ list-style: square;
+  font-size: 24px;
+  
+  
+}
+.pentesting-professional_bg{
+  position: relative;
+  background-image: url('../image/bootcamp_bg2.jpeg');
+  background-size: contain;
+  height: 50vh;
+  color: #FFFFFF;
+  border-radius: 10px;
+} 
+.pentesting-professional_bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px; 
+}
+
+.pentesting-professional_bg h1, .pentesting-professional_bg h2 {
+  position: relative;
+  z-index: 4;
+}
+
+.pentesting-professional img{
+  display: block;
+}
+/* .pentesting-professional h3{
+  font-size: 24px;
+} */
+@media (max-width: 768px){
+  /* .pentesting-professional h1 span{
+    font-size: 20px;
+  }
+ 
+  .pentesting-professional h3{
+    font-size: 20px;
+  } */
+  .pentesting-professional ul li{
+    font-size: 18px;
+  }
+  .pentesting-professional img{
+    display: none;
+  }
+  .pentesting-professional_bg{
+    height: 40vh;
+  }
+ 
+ 
+}
+.whatsapp-logo{
+  width: 100%;}
+
+  
+
+.whatsapp-logo a img{
+  float: right;
+  width:60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+@media (max-width: 768px){
+  .whatsapp-logo a img{
+    float: right;
+    width: 40px;
+    height: 40px;
+  
+  }
+}
+
+/* Carousel*/
+
+
+
+
+.carousel {
+  outline: none; 
+  margin: 30px 0px;
+ 
+  
+}
+
+.slick-dots li button:before {
+  color: #dc3545; 
+}
