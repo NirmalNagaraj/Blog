@@ -8,13 +8,18 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 
 const styles = {
   ubContainer: {
-    padding: '60px',
+    padding: '30px', /* Reduced padding for smaller screens */
+    overflowY: 'auto', /* Enable vertical scrolling */
   },
   ubHeader: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: '20px',
+  },
+  ubTitle: {
+    fontSize: '24px', /* Larger font size for title on smaller screens */
+    marginBottom: '10px', /* Reduced margin for smaller screens */
   },
   ubCreateButton: {
     padding: '10px 20px',
@@ -31,20 +36,18 @@ const styles = {
     justifyContent: 'space-between',
     maxWidth: '800px', 
     margin: '0 auto', 
-    height: 'calc(100vh - 20px)', 
-    
+    marginBottom: '20px', /* Add margin at the bottom */
   },
   ubCard: {
     position: 'relative', 
-    width: 'calc(50% - 20px)', 
+    width: 'calc(50% - 20px)', /* Display two cards per row on larger screens */
     maxWidth: '400px', 
-    maxHeight: '400px', 
     border: '1px solid #ccc',
     borderRadius: '5px',
     padding: '10px', 
     marginBottom: '20px',
     boxSizing: 'border-box',
-    overflow: 'hidden', 
+    
   },
   ubCardImage: {
     width: '100%',
@@ -118,7 +121,7 @@ const UploadBlogs = () => {
   return (
     <div style={styles.ubContainer}>
       <div style={styles.ubHeader}>
-        <h1>Blog Page</h1>
+        <h1 style={styles.ubTitle}>Blog Page</h1>
         <button style={styles.ubCreateButton} onClick={handleCreateButtonClick}>Create</button>
       </div>
 
@@ -128,7 +131,7 @@ const UploadBlogs = () => {
 
       <div style={styles.ubCardsContainer}>
         {blogs.map(blog => (
-          <div key={blog.id} style={styles.ubCard}>
+          <div key={blog.id} style={{ ...styles.ubCard }}> {/* Adjusting card width for smaller screens */}
             {blog.thumbnail && (
               <img src={`${baseURL}/upload/${blog.thumbnail}`} alt="Thumbnail" style={styles.ubCardImage} />
             )}

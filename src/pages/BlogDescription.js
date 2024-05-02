@@ -7,7 +7,8 @@ const styles = {
   bdContainer: {
     padding: '60px',
     maxHeight: 'calc(100vh - 20px)', 
-    overflowY: 'auto', 
+    overflowY: 'auto',
+    overflowX:'hidden',
   },
   bdContent: {
     display: 'flex',

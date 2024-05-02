@@ -4,17 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import baseURL from '../api/url'; 
 
 const styles = {
-  Lcontainer: {
-    padding: '60px',
+  container: {
+    padding: '30px', /* Reduced padding for smaller screens */
     textAlign: 'center',
+    maxWidth: '400px', /* Limiting container width */
+    margin: '0 auto', /* Center aligning the container */
   },
-  Linput: {
+  input: {
     marginBottom: '20px',
     padding: '10px',
     fontSize: '16px',
-    width: '300px',
+    width: '100%', /* Full width on smaller screens */
+    boxSizing: 'border-box', /* Including padding in width calculation */
   },
-  Lbutton: {
+  button: {
     padding: '10px 20px',
     fontSize: '16px',
     cursor: 'pointer',
@@ -22,6 +25,8 @@ const styles = {
     color: '#fff',
     border: 'none',
     borderRadius: '5px',
+    width: '100%', /* Full width on smaller screens */
+    boxSizing: 'border-box', /* Including padding in width calculation */
   },
 };
 
@@ -29,14 +34,12 @@ const LoginPage = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  
   const handleLogin = async () => {
     try {
       const response = await axios.post(`${baseURL}/auth/login`, { username, password });
       console.log('Login successful:', response.data);
-      const isLoggedIn = true; 
-    if (isLoggedIn) {
       setIsLoggedIn(true); 
-    }
       navigate('/uploadBlogs');
     } catch (error) {
       console.error('Error logging in:', error);
@@ -44,7 +47,7 @@ const LoginPage = ({ setIsLoggedIn }) => {
   };
 
   return (
-    <div style={styles.Lcontainer}>
+    <div style={styles.container}>
       <h2>Login</h2>
       <input
         type="text"
@@ -59,10 +62,10 @@ const LoginPage = ({ setIsLoggedIn }) => {
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        style={styles.Linput}
+        style={styles.input}
       />
       <br />
-      <button onClick={handleLogin} style={styles.Lbutton}>
+      <button onClick={handleLogin} style={styles.button}>
         Login
       </button>
     </div>

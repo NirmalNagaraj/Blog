@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #availableBooks, #lentBooks {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 40%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+            padding: 5px 10px;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #bookTitle, #bookAuthor {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        #statusMessage {
+            text-align: center;
+            margin-top: 10px;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>App development</h1>
+    </header>
+    <div class="container">
+        <div id="availableBooks">
+            <h2>Available Books</h2>
+            <ul id="availableList"></ul>
+        </div>
+        <div id="lentBooks">
+            <h2>Lent Books</h2>
+            <ul id="lentList"></ul>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h2>Add New Book</h2>
+            <input type="text" id="bookTitle" placeholder="Enter title">
+            <input type="text" id="bookAuthor" placeholder="Enter author">
+            <button onclick="addBook()">Add Book</button>
+            <p id="statusMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        // Simulated data
+        var availableBooks = ["Book 1", "Book 2", "Book 3"];
+        var lentBooks = ["Book 4", "Book 5"];
+
+        // Function to display books in the corresponding list
+        function displayBooks() {
+            document.getElementById('availableList').innerHTML = availableBooks.map(book => `<li>${book}</li>`).join('');
+            document.getElementById('lentList').innerHTML = lentBooks.map(book => `<li>${book}</li>`).join('');
+        }
+
+        // Function to add a new book
+        function addBook() {
+            var title = document.getElementById('bookTitle').value;
+            var author = document.getElementById('bookAuthor').value;
+            if (title && author) {
+                availableBooks.push(`${title} by ${author}`);
+                displayBooks();
+                document.getElementById('bookTitle').value = '';
+                document.getElementById('bookAuthor').value = '';
+                document.getElementById('statusMessage').innerText = 'Book added successfully!';
+            } else {
+                document.getElementById('statusMessage').innerText = 'Please enter both title and author!';
+            }
+        }
+
+        // Initial display of books
+        displayBooks();
+    </script>
+</body>
+</html>

@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faTrash } from '@fortawesome/free-solid-svg-icons'; 
+import { faTrash } from '@fortawesome/free-solid-svg-icons'; 
 import baseURL from '../api/url';
 
-
-  
 const styles = {
   efContainer: {
     position: 'fixed',
@@ -72,6 +70,8 @@ const styles = {
     cursor: 'pointer',
     color: '#FF0000',
     fontSize: '20px',
+    paddingRight:'50px',
+    paddingTop:'20px'
   },
 };
 
@@ -103,11 +103,15 @@ const EditForm = ({ onClose, title: defaultTitle, description: defaultDescriptio
   };
 
   const handleDelete = async () => {
-    try {
-      await axios.delete(`${baseURL}/api/blogDelete/${defaultTitle}`);
-      onClose();
-    } catch (error) {
-      console.error('Error deleting blog:', error);
+    // Show confirmation dialog
+    const confirmDelete = window.confirm('Are you sure you want to delete this blog?');
+    if (confirmDelete) {
+      try {
+        await axios.delete(`${baseURL}/api/blogDelete/${defaultTitle}`);
+        onClose();
+      } catch (error) {
+        console.error('Error deleting blog:', error);
+      }
     }
   };
 

@@ -41,11 +41,17 @@ const styles = {
     WebkitBoxOrient: 'vertical',
     marginBottom: 0,
     textAlign: 'left',
+    
   },
   bcPostedOn: {
     textAlign: 'left',
     fontStyle: 'italic',
     marginBottom: '5px',
+  },
+  '@media (max-width: 768px)': { // Target screens smaller than 768px
+    bcPostedOn: {
+      fontSize: 'small', // Adjust font size for smaller screens
+    },
   },
   bcTitle: {
     textAlign: 'left',
