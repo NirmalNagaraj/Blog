@@ -92,6 +92,7 @@ const UploadBlogs = () => {
       try {
         const response = await axios.get(`${baseURL}/api/getBlogs`);
         setBlogs(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error('Error fetching blogs:', error);
       }
@@ -133,7 +134,7 @@ const UploadBlogs = () => {
         {blogs.map(blog => (
           <div key={blog.id} style={{ ...styles.ubCard }}> {/* Adjusting card width for smaller screens */}
             {blog.thumbnail && (
-              <img src={`${baseURL}/upload/${blog.thumbnail}`} alt="Thumbnail" style={styles.ubCardImage} />
+              <img src={`${blog.thumbnail}`} alt="Thumbnail" style={styles.ubCardImage} />
             )}
             <h2 style={{ textAlign: 'left' }}>
               {blog.title}

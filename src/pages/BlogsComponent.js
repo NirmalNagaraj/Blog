@@ -92,7 +92,7 @@ const BlogsComponent = () => {
         {blogs.map(blog => (
           <div key={blog.id} style={styles.bcCard} onClick={() => navigateToBlogDetail(blog.title)}>
             {blog.thumbnail && (
-              <img src={`${baseURL}/upload/${blog.thumbnail}`} alt="Thumbnail" style={styles.bcCardImage} />
+              <img src={`${blog.thumbnail}`} alt="Thumbnail" style={styles.bcCardImage} />
             )}
             <p style={styles.bcPostedOn}>Posted on: {formatTimestamp(blog.created_at)}</p>
             <h2 style={styles.bcTitle}>{blog.title}</h2>

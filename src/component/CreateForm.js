@@ -7,7 +7,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 const CreateForm = ({ onClose }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState(null);
+  const [link, setLink] = useState('');
  
   const [isVisible, setIsVisible] = useState(true); 
 
@@ -19,12 +19,9 @@ const CreateForm = ({ onClose }) => {
     setDescription(e.target.value);
   };
 
-  const handleImageChange = (e) => {
-    const selectedImage = e.target.files[0];
-    setImage(selectedImage);
+  const handleLinkChange = (e) => {
+    setLink(e.target.value);
   };
-
-  
 
   const handleCloseClick = () => {
     setIsVisible(false); 
@@ -36,22 +33,17 @@ const CreateForm = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('description', description);
-    formData.append('image', image);
-
     try {
-      const response = await axios.post(`${baseURL}/api/blogs`, formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+      const response = await axios.post(`${baseURL}/api/blogs`, {
+        title,
+        description,
+        link
       });
       alert(response.statusText); 
       console.log('Response:', response.data);
       setTitle('');
       setDescription('');
-      setImage(null);
+      setLink('');
       setIsVisible(false);
       if (typeof onClose === 'function') {
         onClose();
@@ -71,13 +63,13 @@ const CreateForm = ({ onClose }) => {
       <form onSubmit={handleSubmit} >
         <div className="form-group">
           <input
-            type="file"
-            accept=".jpg, .jpeg, .png"
-            onChange={handleImageChange}
+            type="text"
+            placeholder="Link"
+            value={link}
+            onChange={handleLinkChange}
             required
             style={styles.cbinput}
           />
-          
         </div>
         <div className="form-group">
           <input

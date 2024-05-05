@@ -1,3 +1,2 @@
-const baseURL = 'http://localhost:5000';
-
+const baseURL = 'https://blog-api-cdoo.onrender.com';
 export default baseURL;

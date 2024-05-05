@@ -17,7 +17,7 @@ const styles = {
   },
   bdImage: {
     width: '80%',
-    height:'350px',
+    height:'400px',
     borderRadius: '15px',
     marginBottom: '20px',
   },
@@ -60,7 +60,7 @@ const BlogDescription = () => {
     <div style={styles.bdContainer}>
       <div style={styles.bdContent}>
         {blog.thumbnail && (
-          <img src={`${baseURL}/upload/${blog.thumbnail}`} alt="Thumbnail" style={styles.bdImage} />
+          <img src={`${blog.thumbnail}`} alt="Thumbnail" style={styles.bdImage} />
         )}
         <div style={styles.bdTextContainer}>
           <h1 style={styles.bdTitle}>{blog.title}</h1>
