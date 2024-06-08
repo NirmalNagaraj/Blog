@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './App.css';
 import Home from "./component/home";
 import Academy from "./component/academy";
@@ -22,6 +23,12 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <title>Nalaemton Infotech</title>
+        <meta name="description" content="Cybersecurity - 360" />
+        <meta name="keywords" content="Cybersecurity, InfoSec, Cyber Defense" />
+        <meta name="author" content="Nalaemton Infotech" />
+      </Helmet>
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
